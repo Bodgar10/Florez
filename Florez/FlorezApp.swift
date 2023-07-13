@@ -16,7 +16,6 @@ struct FlorezApp: App {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
             
-            print("esto es una prueba")
         }
     }
 }

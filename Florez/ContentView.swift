@@ -39,6 +39,7 @@ struct ContentView: View {
                 }
             }
             Text("Select an item")
+           
         }
     }
 
@@ -46,6 +47,7 @@ struct ContentView: View {
         withAnimation {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
+            print("esto es una prueba")
 
             do {
                 try viewContext.save()
