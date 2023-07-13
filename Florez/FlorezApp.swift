@@ -15,6 +15,8 @@ struct FlorezApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            
+            print("esto es una prueba")
         }
     }
 }
