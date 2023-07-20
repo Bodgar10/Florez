@@ -19,10 +19,34 @@ struct ContentView: View {
             ZStack {
                 Image("bg")
                     .resizable()
+                    .aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
-                HStack {
-                    ButtonFlorez(buttonStyle: .special, title: "Iniciar sesion")
-                    ButtonFlorez(buttonStyle: .principal, title: "REGISTRARSE")
+                VStack {
+                    Image("logo_florez")
+                        .resizable()
+                        .frame(width: 110.0, height: 270.0)
+                    Text("Florez")
+                        .foregroundColor(.white)
+                        .font(.system(size: 35))
+                    
+                    Text("¡Regala una sonrisa hoy!")
+                        .foregroundColor(.white)
+                        .font(.system(size: 25))
+                    Text("Manda flores a donde quieras, \("\n") las llevarémos en menos de 90 minutos")
+                        .foregroundColor(.white)
+                        .font(.system(size: 23))
+                        .multilineTextAlignment(.center)
+                        .padding(.vertical)
+                        
+
+                    HStack {
+                        ButtonFlorez(buttonStyle: .special, title: "Iniciar sesion")
+                        ButtonFlorez(buttonStyle: .principal, title: "REGISTRARSE")
+        
+                           
+                    }
+             
+                    
                 }
             }
            
@@ -89,6 +113,7 @@ struct ButtonFlorez: View {
         }
         .background(buttonStyle.backgroundColor)
         .cornerRadius(5)
+
     }
 }
 
